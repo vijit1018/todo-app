@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# 📝 React To-Do App with Weather API Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**1. Login Page**
 
-## Available Scripts
+![image](https://github.com/user-attachments/assets/6dff7efc-af0a-4e7c-98ba-ebbb9c1f9141)
 
-In the project directory, you can run:
 
-### `npm start`
+**2. Home Screen (Main Page)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://github.com/user-attachments/assets/f14e1fe5-31ea-422e-915d-e8189c67194f)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🌟 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ **Task Management**
+  - Add, edit, and delete tasks
+  - Mark tasks as complete/incomplete
+  - Priority levels (High/Medium/Low)
+  - Local storage persistence
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ⛅ **Weather Integration**
+  - Automatic weather display for outdoor tasks
+  - Current conditions for default location
+  - Error handling for API failures
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔒 **User Authentication**
+  - Login/logout functionality
+  - Protected routes
+  - Mock authentication with Redux
 
-### `npm run eject`
+- 🎨 **Modern UI**
+  - Responsive design (mobile, tablet, desktop)
+  - Priority-based color coding
+  - Clean, intuitive interface
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend**: React 18, Redux Toolkit, React Router
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **Date Handling**: date-fns
+- **Weather API**: OpenWeatherMap
+- **Build Tool**: Vite (or Create React App)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js (v16 or higher)
+- npm (v8 or higher) or yarn
+- Git (for version control)
+- OpenWeatherMap API key (free tier available)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+   ```
 
-### Code Splitting
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```env
+   REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+   ```
 
-### Analyzing the Bundle Size
+4. **Run the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. **Open in browser**
+   The app should automatically open at:
+   ```
+   http://localhost:3000
+   ```
 
-### Making a Progressive Web App
+## 🔐 Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Default login credentials:
+- **Username**: `user`
+- **Password**: `password`
 
-### Advanced Configuration
+*(Note: This is a mock authentication system for demonstration purposes. In a production app, you would connect to a real backend service.)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌤️ Weather Integration
 
-### Deployment
+The app automatically:
+- Shows current weather for London by default
+- Displays weather information for tasks containing "outdoor" in their description
+- Handles API errors gracefully with retry option
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To change the default location, modify `defaultCity` in `WeatherInfo.jsx`.
 
-### `npm run build` fails to minify
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app is fully responsive and works on:
+- Mobile phones (≥320px)
+- Tablets (≥768px)
+- Desktops (≥1024px)
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── features/            # Redux feature folders
+│   ├── auth/            # Authentication logic
+│   ├── tasks/           # Task management
+│   └── weather/         # Weather API integration
+├── App.js               # Main application component
+├── index.js             # Entry point
+├── store.js             # Redux store configuration
+└── styles/              # Global styles
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Follow these steps:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## ✉️ Contact
+
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - youremail@example.com
+
+Project Link: [https://github.com/your-username/todo-app](https://github.com/your-username/todo-app)
+
+---
+
+*Replace placeholder URLs, contact information, and screenshots with your actual project details before publishing.*
