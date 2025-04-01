@@ -142,7 +142,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - youremail@example.com
+Your Name - Vijit Tiwari - vijittiwari1018@gmail
 
 Project Link: [https://github.com/your-username/todo-app](https://github.com/your-username/todo-app)
 
